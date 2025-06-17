@@ -1,103 +1,118 @@
-import Image from "next/image";
+import Features from "@/pagelevel/Features";
+import Timeline from "@/pagelevel/Timeline";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faPlayCircle, faStar, faGraduationCap, faCheck } from "@fortawesome/free-solid-svg-icons";
 
-export default function Home() {
+export default function Home ()
+{
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section className="relative overflow-hidden bg-gradient-to-r p-20 from-blue-50 to-indigo-50 min-h-[85vh] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://readdy.ai/api/search-image?query=modern%20abstract%20geometric%20pattern%20with%20soft%20blue%20and%20purple%20gradient%2C%20minimalist%20design%20with%20floating%203D%20shapes%2C%20professional%20and%20clean%20style%2C%20perfect%20for%20website%20hero%20background%2C%20ensuring%20text%20readability%20on%20left%20side&width=1440&height=800&seq=10&orientation=landscape"
+            alt="Background"
+            className="w-full h-full object-cover object-center opacity-90"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="md:w-1/2 mb-10 md:mb-0">
+              <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-blue-700 font-medium mb-6">
+                #BEST Platform for MPSC Preparation
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                Master Your MPSC <br />
+                <span className="text-blue-700">Journey</span> With Us
+              </h1>
+              <p className="text-xl text-gray-700 mb-8 max-w-lg leading-relaxed">
+                Join thousands of successful candidates who transformed their
+                MPSC preparation with our expert guidance and comprehensive
+                study resources.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <button className="px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg shadow-xl hover:bg-blue-800 transition duration-300 transform hover:translate-y-[-2px] !rounded-button whitespace-nowrap cursor-pointer flex items-center">
+                  <span>Start Learning</span>
+                  <FontAwesomeIcon icon={ faArrowRight } className="ml-2 w-5" />
+                </button>
+                <button className="px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg shadow-xl hover:bg-gray-50 transition duration-300 transform hover:translate-y-[-2px] !rounded-button whitespace-nowrap cursor-pointer flex items-center">
+                  <FontAwesomeIcon icon={ faPlayCircle } className="mr-2 w-5" />
+                  <span>Watch Demo</span>
+                </button>
+              </div>
+              <div className="mt-12 flex items-center gap-8">
+                <div className="flex items-center">
+                  <div className="flex -space-x-4">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20young%20Indian%20person%20smiling%2C%20clean%20background&width=50&height=50&seq=11&orientation=squarish"
+                      alt="User"
+                      className="w-12 h-12 rounded-full border-2 border-white"
+                    />
+                    <img
+                      src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20middle%20aged%20Indian%20person%20smiling%2C%20clean%20background&width=50&height=50&seq=12&orientation=squarish"
+                      alt="User"
+                      className="w-12 h-12 rounded-full border-2 border-white"
+                    />
+                    <img
+                      src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20young%20Indian%20woman%20smiling%2C%20clean%20background&width=50&height=50&seq=13&orientation=squarish"
+                      alt="User"
+                      className="w-12 h-12 rounded-full border-2 border-white"
+                    />
+                  </div>
+                  <span className="ml-4">
+                    <div className="font-bold text-gray-900">15,000+</div>
+                    <div className="text-sm text-gray-600">Active Students</div>
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="text-yellow-400 text-2xl mr-2">
+                    <FontAwesomeIcon icon={ faStar } className="w-5" />
+                  </div>
+                  <span>
+                    <div className="font-bold text-gray-900">4.9/5</div>
+                    <div className="text-sm text-gray-600">Student Rating</div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2 flex justify-end">
+              <div className="relative">
+                <img
+                  src="https://readdy.ai/api/search-image?query=modern%20educational%20scene%20with%20student%20studying%20on%20tablet%2C%20surrounded%20by%20floating%203D%20educational%20icons%20and%20holographic%20interface%20elements%2C%20futuristic%20learning%20concept%2C%20high%20quality%20professional&width=700&height=600&seq=14&orientation=portrait"
+                  alt="MPSC Learning"
+                  className="rounded-2xl shadow-2xl max-w-full h-auto transform hover:scale-105 transition duration-500"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <FontAwesomeIcon icon={ faGraduationCap } className="text-blue-600 w-5" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">500+</div>
+                      <div className="text-sm text-gray-600">
+                        Success Stories
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                      <FontAwesomeIcon icon={ faCheck } className="text-green-600 w-5" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-gray-900">100%</div>
+                      <div className="text-sm text-gray-600">Success Rate</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Timeline />
+      <Features />
+    </>
   );
 }
