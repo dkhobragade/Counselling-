@@ -15,7 +15,7 @@ const Header = () =>
                     <nav className="hidden lg:flex items-center space-x-6">
                         <div className="relative group">
                             <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium cursor-pointer">
-                                Courses { " " }<DownOutlined />
+                                Courses <DownOutlined className='ml-1' />
                             </button>
                             <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
                                 <a
@@ -34,7 +34,7 @@ const Header = () =>
                         </div>
                         <div className="relative group">
                             <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium cursor-pointer">
-                                PYQ { " " }<DownOutlined />
+                                PYQ <DownOutlined className='ml-1' />
                             </button>
                             <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
                                 <a

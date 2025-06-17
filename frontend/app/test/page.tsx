@@ -1,13 +1,17 @@
-import TSFeatures from '@/pagelevel/TSFeatures'
+import { Suspense } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartLine, faCrown, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons/faFile'
+import Loading from '../loading'
 import AvailableTSSection from '@/pagelevel/AvailableTSSection'
+import TSFeatures from '@/pagelevel/TSFeatures'
+
 
 const page = () =>
 {
+
     return (
-        <>
+        <Suspense fallback={ <Loading /> }>
             <section className="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-indigo-50">
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-center">
@@ -27,10 +31,10 @@ const page = () =>
                             <div className="flex flex-wrap gap-4">
                                 <button className="px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg shadow-xl hover:bg-blue-800 transition duration-300 transform hover:translate-y-[-2px] !rounded-button whitespace-nowrap cursor-pointer flex items-center">
                                     <span>Explore Free Tests</span>
-                                    <FontAwesomeIcon className='ml-2' icon={ faArrowRight } />
+                                    <FontAwesomeIcon className='ml-2 w-5' icon={ faArrowRight } />
                                 </button>
                                 <button className="px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg shadow-xl hover:bg-gray-50 transition duration-300 transform hover:translate-y-[-2px] !rounded-button whitespace-nowrap cursor-pointer flex items-center">
-                                    <FontAwesomeIcon className='mr-2' icon={ faCrown } />
+                                    <FontAwesomeIcon className='mr-2 w-5' icon={ faCrown } />
                                     <span>View Premium Plans</span>
                                 </button>
                             </div>
@@ -44,7 +48,7 @@ const page = () =>
                             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
                                 <div className="flex items-center gap-3">
                                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                                        <FontAwesomeIcon icon={ faFile } className='text-blue-600' />
+                                        <FontAwesomeIcon icon={ faFile } className='text-blue-600 w-5' />
                                     </div>
                                     <div>
                                         <div className="font-bold text-gray-900">1500+</div>
@@ -57,7 +61,7 @@ const page = () =>
                             <div className="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
                                 <div className="flex items-center gap-3">
                                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                                        <FontAwesomeIcon icon={ faChartLine } className='text-green-600 text-xl' />
+                                        <FontAwesomeIcon icon={ faChartLine } className='text-green-600  w-5' />
                                     </div>
                                     <div>
                                         <div className="font-bold text-gray-900">Advanced</div>
@@ -73,7 +77,7 @@ const page = () =>
             </section>
             <TSFeatures />
             <AvailableTSSection />
-        </>
+        </Suspense>
 
     )
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Header from "@/pagelevel/Header";
-import Footer from "@/pagelevel/Footer";
+import HeaderWrapper from "@/pagelevel/HeaderWrapper";
+import FooterWrapper from "@/pagelevel/FooterWrapper";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,13 +14,14 @@ export default function RootLayout ( {
   children: React.ReactNode;
 }> )
 {
+
   return (
     <html lang="en">
       <body
         className='w-full h-screen'>
-        <Header />
+        <HeaderWrapper />
         { children }
-        <Footer />
+        <FooterWrapper />
       </body>
     </html>
   );
