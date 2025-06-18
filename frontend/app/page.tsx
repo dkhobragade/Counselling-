@@ -8,13 +8,6 @@ export default function Home ()
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-r p-20 from-blue-50 to-indigo-50 min-h-[85vh] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://readdy.ai/api/search-image?query=modern%20abstract%20geometric%20pattern%20with%20soft%20blue%20and%20purple%20gradient%2C%20minimalist%20design%20with%20floating%203D%20shapes%2C%20professional%20and%20clean%20style%2C%20perfect%20for%20website%20hero%20background%2C%20ensuring%20text%20readability%20on%20left%20side&width=1440&height=800&seq=10&orientation=landscape"
-            alt="Background"
-            className="w-full h-full object-cover object-center opacity-90"
-          />
-        </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-10 md:mb-0">
