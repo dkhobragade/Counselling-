@@ -6,6 +6,6 @@ import Header from "./Header";
 export default function HeaderWrapper ()
 {
     const pathname = usePathname();
-    if ( pathname === "/signIn" ) return null;
+    if ( pathname === "/signIn" || pathname === "/logIn" ) return null;
     return <Header />;
 }
