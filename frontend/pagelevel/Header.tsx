@@ -58,12 +58,6 @@ const Header = () =>
                             Free Initiative
                         </a>
                         <a
-                            href="#"
-                            className="text-gray-700 hover:text-blue-600 font-medium cursor-pointer"
-                        >
-                            Demo
-                        </a>
-                        <a
                             href="counselling"
                             className="text-gray-700 hover:text-blue-600 font-medium cursor-pointer"
                         >
